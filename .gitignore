@@ -34,3 +34,11 @@ out/
 
 
 *.lock
+
+*.class
+
+*.jar
+
+*.html
+
+*.xml

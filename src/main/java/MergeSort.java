@@ -140,6 +140,69 @@ public class MergeSort {
         return answer;
     }
 
+
+    /// Merge sort in place
+
+    /**
+     * Sorts and merges `in[start, ..., start + inc - 1]` and `in[start + inc, ..., start + 2*inc - 1]` into `out`.
+     *
+     * @param in    The input array, sorted in their intervals `in[start, ..., start + inc - 1]` and `in[start + inc, ..., start + 2*inc - 1]`.
+     * @param out   The output array that should be updated to have `in[start, ..., start + inc - 1]` and `in[start + inc, ..., start + 2*inc - 1]`
+     *              in sorted fashion at `out[start, start + 2*inc - 1]`.
+     * @param start The index of the first element to be merged into out.
+     * @param inc   The size of each of the intervals to be merged into out.
+     */
+    public static void merge(int[] in, int[] out, int start, int inc) {
+        int n = in.length;
+
+        int end1 = Math.min(start + inc, n);
+        int end2 = Math.min(start + 2 * inc, n);
+
+        int i = start;
+        int j = start + inc;
+        int index = start;
+
+        while (i < end1 && j < end2) {
+            if (in[i] < in[j]) {
+                out[index++] = in[i++];
+            } else {
+                out[index++] = in[j++];
+            }
+        }
+
+        while (i < end1) {
+            out[index++] = in[i++];
+        }
+
+        while (j < end2) {
+            out[index++] = in[j++];
+        }
+    }
+
+    /**
+     * Sorts the input array using bottom-up merge sort.
+     *
+     * @param array The array to be sorted.
+     * @return The resulting sorted array.
+     */
+    public static int[] mergeSortBottomUp(int[] array) {
+
+        int n = array.length;
+        int[] temp = new int[n];
+
+
+        for (int i = 1; i < n; i *= 2) {
+            for (int j = 0; j < n; j += 2 * i) {
+                merge(array, temp, j, i);
+            }
+            int[] modified = array;
+            array = temp;
+            temp = modified;
+        }
+
+        return array;
+    }
+
 }
 
 class LibraryQueue<T> {
