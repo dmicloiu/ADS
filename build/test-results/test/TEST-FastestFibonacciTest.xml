@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FastestFibonacciTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-08-08T12:53:20" hostname="dianas-MacBook-Pro.local" time="0.024">
+  <properties/>
+  <testcase name="testExample()" classname="FastestFibonacciTest" time="0.014"/>
+  <testcase name="testSmall()" classname="FastestFibonacciTest" time="0.001"/>
+  <testcase name="testTime()" classname="FastestFibonacciTest" time="0.005"/>
+  <testcase name="testBaseZero()" classname="FastestFibonacciTest" time="0.001"/>
+  <testcase name="testBaseOne()" classname="FastestFibonacciTest" time="0.001"/>
+  <testcase name="testLarge2()" classname="FastestFibonacciTest" time="0.001"/>
+  <testcase name="testMedium()" classname="FastestFibonacciTest" time="0.0"/>
+  <system-out><![CDATA[Elapsed time for 10: 0 ms
+Elapsed time for 20: 0 ms
+Elapsed time for 30: 0 ms
+Elapsed time for 40: 0 ms
+Elapsed time for 41: 0 ms
+Elapsed time for 42: 0 ms
+Elapsed time for 43: 0 ms
+Elapsed time for 44: 0 ms
+Elapsed time for 1000: 0 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
